@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  font-size: 12px;
+}
+
+#title{
+  font-family: "Open Sans Condensed";
+  font-size: 3rem;
+  text-align: left;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.10rem;
+}
+
+#module-one-style{
+
+  border-radius: 4px;
+  color: black;
+  background-color: white;
+  width: 50%;
+  
+}
+#module-one-style:hover{
+
+  box-shadow: 0px 0px 10px 10px;
+  color: lightgrey;
+  background-color: white;
+    
+}
+
+.module-titles{
+  font-family: "Open Sans Condensed";
+  font-size: 1.5rem;
+  text-align: center;
+  color: black;
+  font-weight: 200;
+
+}
+
+.log-btn{
+  position: relative;
+  width: auto;
+  margin: 0px;
+  border-radius: 6px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 80ms ease-in-out 0s;
+  padding: 24px;
+  font-size: 16px;
+  border: 1px solid rgb(5, 177, 105);
+  background-color: rgb(5, 177, 105);
+}
+
+.log-btn:hover{
+  border: 1px solid #434343;
+}
