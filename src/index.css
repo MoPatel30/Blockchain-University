@@ -18,27 +18,36 @@ body{
 
 }
 #root{
-  background-color: #4d94ff;
+  background-color: #0066ff;
   padding: 2rem;
+  position: relative;
+  top: -40px;
 
 }
 
 #header{
-  background-color: whitesmoke;
+  background-color: #f6f9fc;
+  padding: 3rem;
+}
+
+#footer{
+  background-color:#f6f9fc;
+  padding: 2rem;
 }
 
 #modules{
-  background-color: #4d94ff;
+  background-color: #0066ff;
   display: inline-flex;
   width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   position: relative;
-  top: 75px;
-
+  
 }
 
 #module-one{
   position: relative;
-  left: 11%;
+  left: 18%;
   width: 50%;
 
 }
@@ -56,3 +65,4 @@ body{
   left: 85%;
   width: 10%;
 }
+

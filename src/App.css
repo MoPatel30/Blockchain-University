@@ -39,38 +39,76 @@
 
 body{
   font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-family: Ubuntu,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #title{
-  font-family: "Open Sans Condensed";
-  font-size: 3rem;
+  font-family:Ubuntu,Helvetica,Arial,sans-serif;;
+  font-size: 2rem;
   text-align: left;
   color: white;
   font-weight: 500;
   letter-spacing: 0.10rem;
 }
 
+#header-title{
+  font-family: Ubuntu,Helvetica,Arial,sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+  text-indent: 5%;
+  color: black;
+  font-weight: 500;
+}
+
+#main-message-style{
+  text-align: left;
+  position: relative;
+  left: 10%;
+  line-height: 175%;
+  font-size: 1.25rem;
+  width: 50%;
+
+
+}
+
 #module-one-style{
 
   border-radius: 4px;
   color: black;
-  background-color: white;
-  width: 50%;
+  background-color: #0066ff;
+  width: 60%;
   
 }
 #module-one-style:hover{
 
   box-shadow: 0px 0px 10px 10px;
-  color: lightgrey;
-  background-color: white;
+  color: #5599ff;
+  background-color: #0066ff;
+
     
 }
 
 .module-titles{
-  font-family: "Open Sans Condensed";
+  font-family: Ubuntu,Helvetica,Arial,sans-serif;
   font-size: 1.5rem;
   text-align: center;
-  color: black;
+  color: white;
+  font-weight: bold;
+
+}
+
+.main-text{
+  font-family: Ubuntu,Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
   font-weight: 200;
 
 }
