@@ -7,7 +7,7 @@
 
 
 #mongodb application connection string
-./backend/.env
+/backend/.env
 
 
 # testing
