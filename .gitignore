@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+
+#mongodb application connection string
+./backend/.env
+
+
 # testing
 /coverage
 

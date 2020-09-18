@@ -9,7 +9,9 @@ In the process of creating a fully functioning full stack web-app using MERN Sta
 MERN Stack
 
 Front-end: ReactJS, HTML, CSS
+
 Back-end: NodeJS, Express
+
 Services: MongoDB Atlas, Insomnia (API Request Testing), Firebase (For when I deploy the site)
 
 
