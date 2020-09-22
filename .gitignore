@@ -7,6 +7,11 @@
 
 
 #mongodb application connection string
+/backend
+/.env
+
+.env
+
 /backend/.env
 
 

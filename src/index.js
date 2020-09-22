@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {App, ModuleOne, ModuleTwo, LogIn, Header, Footer} from './App';
+import {App} from './App';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -11,34 +11,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-ReactDOM.render(
-  <ModuleOne />,
-document.getElementById('module-one')
-);
 
-
-ReactDOM.render(
-  <ModuleTwo />,
-document.getElementById('module-two')
-);
-
-
-ReactDOM.render(
-  <LogIn />,
-document.getElementById('log-in-btn')
-);
-
-
-ReactDOM.render(
-  <Header />,
-document.getElementById('header')
-);
-
-
-ReactDOM.render(
-  <Footer />,
-document.getElementById('footer')
-);
 
 
 // If you want your app to work offline and load faster, you can change

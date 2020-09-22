@@ -17,52 +17,5 @@ body{
   background-color: white;
 
 }
-#root{
-  background-color: #0066ff;
-  padding: 2rem;
-  position: relative;
-  top: -40px;
 
-}
-
-#header{
-  background-color: #f6f9fc;
-  padding: 3rem;
-}
-
-#footer{
-  background-color:#f6f9fc;
-  padding: 2rem;
-}
-
-#modules{
-  background-color: #0066ff;
-  display: inline-flex;
-  width: 100%;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  position: relative;
-  
-}
-
-#module-one{
-  position: relative;
-  left: 18%;
-  width: 50%;
-
-}
-
-#module-two{
-  position: relative;
-  left: 5%;
-  width: 45%;
-
-}
-
-#log-in-btn{
-  position: absolute;
-  top: 55px;
-  left: 85%;
-  width: 10%;
-}
 
