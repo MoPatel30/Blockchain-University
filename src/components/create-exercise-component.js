@@ -10,14 +10,14 @@ export default class CreateExercises extends React.Component{
 
         this.onChangeUsername = this.onChangeUsername.bind(this)
         this.onChangeDescription = this.onChangeDescription.bind(this)
-        this.onChangeDuration = this.onChangeDuration.bind(this)
+        this.onChangeNotes = this.onChangeNotes.bind(this)
         this.onChangeDate = this.onChangeDate.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
 
         this.state = {
             username : "",
             description: "",
-            duration: 0,
+            notes: "",
             date : new Date(),
             users: []
 
@@ -25,7 +25,7 @@ export default class CreateExercises extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost5000/users/")
+        axios.get("http://localhost:5000/users/")
             .then(res => {
                 if(res.data.length > 0){
                     this.setState({
@@ -34,6 +34,9 @@ export default class CreateExercises extends React.Component{
                     })
                 }
             })
+        .catch((error) => {
+            console.log(error)
+        })
     }
 
     onChangeUsername(e){
@@ -49,9 +52,9 @@ export default class CreateExercises extends React.Component{
     }
     
 
-    onChangeDuration(e){
+    onChangeNotes(e){
         this.setState({
-            duration: e.target.value
+            notes: e.target.value
         })
     }
 
@@ -68,7 +71,7 @@ export default class CreateExercises extends React.Component{
         const exercise = {
             username : this.state.username,
             description : this.state.description,
-            duration : this.state.duration,
+            notes : this.state.notes,
             date : this.state.date
         }
 
@@ -76,6 +79,8 @@ export default class CreateExercises extends React.Component{
 
         axios.post("http://localhost:5000/exercises/add", exercise)
             .then(res => console.log(res.data))
+
+        window.location = "/"
      
     }
     
@@ -85,11 +90,13 @@ export default class CreateExercises extends React.Component{
     render(){
         return(
             <div>
-                <h1> Create New Exercise Log </h1>
+                <h1 style = {{color: "white"}}> Create New Workout Log </h1>
+
+                
 
                 <form onSubmit = {this.onSubmit}>
                     <div className = "form-group">
-                        <label>Username: </label>
+                        <label style = {{color: "white"}}>Username: </label>
                         <select ref = "userInput"
                             required
                             className = "form-control"
@@ -107,7 +114,7 @@ export default class CreateExercises extends React.Component{
                     </div>
 
                     <div className = "form-group">
-                        <label>Description: </label>
+                        <label style = {{color: "white"}}>Description: </label>
                         <input type = "text"
                             required
                             className = "form-control"
@@ -117,17 +124,17 @@ export default class CreateExercises extends React.Component{
                     </div>
 
                     <div className = "form-group">
-                        <label>Duration (Minutes): </label>
+                        <label style = {{color: "white"}}>Notes: </label>
                         <input type = "text"
                             required
                             className = "form-control"
-                            value = {this.state.duration}
-                            onChange = {this.onChangeDuration} 
+                            value = {this.state.notes}
+                            onChange = {this.onChangeNotes} 
                         />
                     </div>
 
                     <div className = "form-group">
-                        <label>Date: </label>
+                        <label style = {{color: "white"}}>Date: </label>
                         <div>
                             <DatePicker 
                                 selected = {this.state.date}

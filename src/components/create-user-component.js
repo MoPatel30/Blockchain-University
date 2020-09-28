@@ -42,10 +42,10 @@ export default class CreateUser extends React.Component{
     render(){
         return(
             <div>
-                <h1>Create New User</h1>
+                <h1 style = {{color: "white"}}>Create New User</h1>
                 <form onSubmit = {this.onSubmit}>
                     <div className = "form-group">
-                        <label>Username: </label>
+                        <label style = {{color: "white"}}>Username: </label>
                         <input type = "text"
                             required
                             className = "form-control"
@@ -55,7 +55,7 @@ export default class CreateUser extends React.Component{
                     </div>
 
                     <div className = "form-group">
-                        <input type = "submit" value = "Create User" className = "btn btn-priamry" />
+                        <input type = "submit" style = {{color: "white"}} value = "Create User" className = "btn btn-priamry" />
                     </div>
                 </form>
             </div>

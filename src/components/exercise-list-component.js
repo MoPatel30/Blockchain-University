@@ -9,7 +9,7 @@ const Exercise = props => (
     <tr>
       <td>{props.exercise.username}</td>
       <td>{props.exercise.description}</td>
-      <td>{props.exercise.duration}</td>
+      <td>{props.exercise.notes}</td>
       <td>{props.exercise.date.substring(0,10)}</td>
       <td>
         <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
@@ -30,19 +30,17 @@ export default class ExerciseList extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost5000/exercises/")
+        axios.get("http://localhost:5000/exercises/")
             .then(response => {
                 this.setState({
                     exercises: response.data
                 })
-            .catch((error) => {
-                console.log(error)
-            })
+           
             })
     }
 
     deleteExercise(id){
-        axios.delete("http://localhost5000/exercises/"+id)
+        axios.delete("http://localhost:5000/exercises/"+id)
             .then(res => console.log(res.data))
         this.setState({
             exercises: this.state.exercises.filter(el => el._id != id)
@@ -57,18 +55,18 @@ export default class ExerciseList extends React.Component{
     render(){
         return(
             <div>
-                <h1>Logged Exercises</h1>
+                <h1 style = {{color: "white"}}>Logged Workout</h1>
                     <table className = "table">
                         <thead className = "thead-light">
                             <tr>
                                 <th>Username</th>
                                 <th>Description</th>
-                                <th>Duration</th>
+                                <th>Notes</th>
                                 <th>Date</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody style = {{color: "white"}}>
                             { this.exerciseList() }
                         </tbody>
                     </table>    
