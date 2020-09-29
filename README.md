@@ -1,4 +1,7 @@
-# Practicing Full Stack Dev
+# Workout Tracker
+
+Created a workout tracker for my siblings and I. Practicing full-stack development. MERN Stack.
+
 
 ## About
 
@@ -7,6 +10,12 @@ A fully functioning full stack web-app using MERN Stack.
 A workout tracker that allows my siblings and I to track our workouts throughout the week. 
 
 Hosted on a private domain, so it's only accessible to my siblings and I. Will provide some pictures below.
+
+
+![Main Page](src/images/main.JPG)
+
+
+![Form Page](src/images/form.JPG)
 
 
 ## Languages/Tools/Services used/in use:
