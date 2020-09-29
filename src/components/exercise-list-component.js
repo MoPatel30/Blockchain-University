@@ -30,7 +30,7 @@ export default class ExerciseList extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:5000/exercises/")
+        axios.get("http://track-your-work-out.web.app/exercises/")
             .then(response => {
                 this.setState({
                     exercises: response.data
@@ -40,7 +40,7 @@ export default class ExerciseList extends React.Component{
     }
 
     deleteExercise(id){
-        axios.delete("http://localhost:5000/exercises/"+id)
+        axios.delete("http://track-your-work-out.web.app/exercises/"+id)
             .then(res => console.log(res.data))
         this.setState({
             exercises: this.state.exercises.filter(el => el._id != id)

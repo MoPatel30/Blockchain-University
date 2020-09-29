@@ -6,6 +6,12 @@
 .pnp.js
 
 
+#firebase files
+./firebase
+/firebase
+.firebase
+.firebaserc
+firebase.json
 #mongodb application connection string
 /backend
 /.env

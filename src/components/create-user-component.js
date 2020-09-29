@@ -30,7 +30,7 @@ export default class CreateUser extends React.Component{
         }
         console.log(user)
 
-        axios.post("http://localhost:5000/users/add", user)
+        axios.post("http://track-your-work-out.web.app/users/add", user)
             .then(res => console.log(res.data))
         
         this.setState({

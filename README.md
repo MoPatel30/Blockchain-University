@@ -2,7 +2,12 @@
 
 ## About
 
-In the process of creating a fully functioning full stack web-app using MERN Stack. 
+A fully functioning full stack web-app using MERN Stack. 
+
+A workout tracker that allows my siblings and I to track our workouts throughout the week. 
+
+Hosted on a private domain, so it's only accessible to my siblings and I. Will provide some pictures below.
+
 
 ## Languages/Tools/Services used/in use:
 
@@ -12,7 +17,7 @@ Front-end: ReactJS, HTML, CSS
 
 Back-end: NodeJS, Express
 
-Services: MongoDB Atlas, Insomnia (API Request Testing), Firebase (For when I deploy the site)
+Services: MongoDB Atlas (Database), Insomnia (API Request Testing), Firebase (to deploy the site)
 
 
 ## Creator:
