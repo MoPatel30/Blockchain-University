@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import axios from "./axios"
 
 
 
@@ -30,7 +30,7 @@ export default class CreateUser extends React.Component{
         }
         console.log(user)
 
-        axios.post("http://track-your-work-out.web.app/users/add", user)
+        axios.post("user/add", user)
             .then(res => console.log(res.data))
         
         this.setState({

@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import axios from "axios";
+import axios from "./axios"
 
 
 
@@ -30,7 +30,7 @@ export default class ExerciseList extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("http://track-your-work-out.web.app/exercises/")
+        axios.get("/exercises/")
             .then(response => {
                 this.setState({
                     exercises: response.data
@@ -40,7 +40,7 @@ export default class ExerciseList extends React.Component{
     }
 
     deleteExercise(id){
-        axios.delete("http://track-your-work-out.web.app/exercises/"+id)
+        axios.delete("/exercises/"+id)
             .then(res => console.log(res.data))
         this.setState({
             exercises: this.state.exercises.filter(el => el._id != id)

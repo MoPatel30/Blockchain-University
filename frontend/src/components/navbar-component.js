@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import {Link} from "react-router-dom";
 
+
 export default class Navbar extends React.Component{
     render(){
         return(
@@ -30,3 +31,23 @@ export default class Navbar extends React.Component{
         )
     }
 }
+
+
+
+
+/*
+export default class React extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            hello: "mo"
+        }
+    }
+    render(){
+        return(
+            <h1 style = {{color: "black", postiion: "absolute", fontSize: "24px"}}>{this.state.hello}</h1>
+
+        )
+    }
+}
+*/

@@ -13,7 +13,7 @@
 .firebaserc
 firebase.json
 #mongodb application connection string
-/backend
+../backend
 /.env
 
 .env

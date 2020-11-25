@@ -1,7 +1,7 @@
 import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import axios from "axios";
+import axios from "./axios"
 
 export default class EditExercise extends React.Component{
     constructor(props){
@@ -25,7 +25,7 @@ export default class EditExercise extends React.Component{
 
     componentDidMount(){
 
-        axios.get("http://track-your-work-out.web.app/exercises/" + this.props.match.params.id)
+        axios.get("/exercises/" + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     username: response.data.username,
@@ -35,7 +35,7 @@ export default class EditExercise extends React.Component{
                 })
             })
 
-        axios.get("http://track-your-work-out.web.app/users/")
+        axios.get("/users/")
             .then(res => {
                 if(res.data.length > 0){
                     this.setState({
@@ -84,7 +84,7 @@ export default class EditExercise extends React.Component{
 
         console.log(exercise)
 
-        axios.post("http://track-your-work-out.web.app/exercises/update/" + this.props.match.params.id, exercise)
+        axios.post("/exercises/update/" + this.props.match.params.id, exercise)
             .then(res => console.log(res.data))
 
         window.location = "/"
