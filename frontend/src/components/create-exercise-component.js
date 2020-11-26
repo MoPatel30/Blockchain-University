@@ -25,7 +25,7 @@ export default class CreateExercises extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("create/")
+        axios.get("/users")
             .then(res => {
                 if(res.data.length > 0){
                     this.setState({
@@ -77,7 +77,7 @@ export default class CreateExercises extends React.Component{
 
         console.log(exercise)
 
-        axios.post("create/add", exercise)
+        axios.post("exercises/add", exercise)
             .then(res => console.log(res.data))
 
         window.location = "/"

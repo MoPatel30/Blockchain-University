@@ -4,7 +4,6 @@ import axios from "./axios"
 
 
 
-
 const Exercise = props => (
     <tr>
       <td>{props.exercise.username}</td>
@@ -27,6 +26,7 @@ export default class ExerciseList extends React.Component{
             exercises: []
 
         }
+        console.log(this.state.exercises)
     }
 
     componentDidMount(){
@@ -35,7 +35,8 @@ export default class ExerciseList extends React.Component{
                 this.setState({
                     exercises: response.data
                 })
-           
+                console.log("exercises fetched")
+                console.log(this.state.exercises)
             })
     }
 
@@ -46,13 +47,17 @@ export default class ExerciseList extends React.Component{
             exercises: this.state.exercises.filter(el => el._id != id)
         })
     }
-
+    
+    /*
     exerciseList(){
+        //{ this.exerciseList() }
         return this.state.exercises.map(currentExercise => {
             return <Exercise exercise = {currentExercise} deleteExercise = {this.deleteExercise} key = {currentExercise._id}/>
         })
-    }
+    }*/
+
     render(){
+        console.log(this.state.exercises)
         return(
             <div>
                 <h1 style = {{color: "white"}}>Logged Workout</h1>
@@ -67,7 +72,9 @@ export default class ExerciseList extends React.Component{
                             </tr>
                         </thead>
                         <tbody style = {{color: "white"}}>
-                            { this.exerciseList() }
+                            {this.state.exercises.map((currentExercise) => (
+                                <Exercise exercise = {currentExercise} deleteExercise = {this.deleteExercise} key = {currentExercise._id}/>
+                            ))}
                         </tbody>
                     </table>    
             </div>

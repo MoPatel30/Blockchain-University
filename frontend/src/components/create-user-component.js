@@ -28,9 +28,9 @@ export default class CreateUser extends React.Component{
         const user = {
             username : this.state.username,
         }
-        console.log(user)
+        
 
-        axios.post("user/add", user)
+        axios.post("/users/add", user)
             .then(res => console.log(res.data))
         
         this.setState({
