@@ -43,9 +43,9 @@ export default class ExerciseList extends React.Component{
     deleteExercise(id){
         axios.delete("/exercises/"+id)
             .then(res => console.log(res.data))
-        this.setState({
-            exercises: this.state.exercises.filter(el => el._id != id)
-        })
+                this.setState({
+                    exercises: this.state.exercises.filter(el => el._id != id)
+                })
     }
     
     /*
